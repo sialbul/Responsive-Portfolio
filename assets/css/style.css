@@ -8,71 +8,65 @@ body {font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 @font-face {
       font-family: quicksand;
       src:quicksand;
-    }
+     }
   
-* {
-  font-family: myFirstFont;}
-    
+* {font-family: myFirstFont;}
 
-header{background: white;
-     width: 100%;
-     left:0;
-     
-     color: #777;
-     display: block;
-     font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
-     padding: 22px;
-     text-align: center;
-     border:1px solid gray;}
+#sibel { float: left;
+  margin: 15px;
+  border: 3px solid #4aaaa5;
+  border-radius: 360%;
+  width:30%;}
 
-#code1 {background-color: #4aaaa5;
-       border:1px solid black; 
-       display: inline;
-       border-radius: 5px;
-       padding:20px;
-     position: relative;
-     right:180px;
-color: white;
-font-size:30px;
-font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-text-shadow: 2px 2px 5px black;
-
-
+/*  Header */
+ul {
+  list-style-type: none;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding: 5px;
+  overflow: hidden;
+  background-color: white;
+    width: 100%;
 }
-#code2 {margin-right:  10px;
-     position: relative;
-     left:200px;
-    font-size:20px;
-    border-right: 1px dotted black;
-   padding-right: 15px;
-  }       
 
-#code3 {margin-right: 20px;
-      position: relative;
-      left:200px;
-     font-size:20px;
-     } 
+li {border-right:1px solid #bbb;}
 
-     
+li:first-child {
+  border-right: none;}
+
+li a {
+  display: block;
+  color: #4aaaa5;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;}
+
+
+header {background: white;
+        width: 100%;
+        border:1px solid gray;}
 
 .container {width:960px;
-     margin:0 auto;
-     background-color: white;
-     height:700px;
-     }
+            margin:20px auto;
+            background-color: white;
+            padding:0px 10px 20px; }
 
-.container2{ padding:20px;}
+.container3 { width: 960px;
+              margin: auto;  }
 
-Article
-     {color: '#ebebeb';
-     background: '#777'}
+Article {color: '#ebebeb';
+        background: '#777'}
 
-
-
-h1{
-     color: '#777';
+h1{ color: '#777';
      background: '#ebebeb';
-     }
+     background-color: #4aaaa5;
+     padding:10px;
+     color: white;
+     font-size:30px;
+     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+     text-shadow: 1px 2px 5px black;
+     margin:5px;
+     width: fit-content; }
 
 h2 { color:#4aaaa5;
      position: relative;
@@ -81,14 +75,16 @@ h2 { color:#4aaaa5;
      padding-bottom: 10px;
      font-size:30px;}
 
-p{   color: '#777';
-     background: '#ebebeb';
-     line-height: 1.8;
-     padding: 5px;
-     font-size: 18px;
+p{  color: '#777';
+    background: '#ebebeb';
+    line-height: 1.8;
+    padding: 5px;
+    font-size: 18px; }   
 
-     }   
-
+.clearfix::after {
+          content: "";
+          clear: both;
+          display: table;}
       
 
 footer { position: fixed;
@@ -100,70 +96,52 @@ footer { position: fixed;
      display: block;
      font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
      text-align: center;
-     border-top: 8px solid #4aaaa5;
-      }
+     border-top: 8px solid #4aaaa5; }
       
 
    
    /* When moving the mouse over the submit button, add a darker green color */
    input[type=submit]:hover {
-     background-color: #45a049;
-   }
-   
-   /* Add a background color and some padding around the form */
-   
-  
-   div.gallery {
+     background-color: #45a049;}
+     
+  div.gallery {
      margin: 40px;
      border: 1px solid #ccc;
      float: left;
-     width:;
-     height:;
      margin-left: 100px;
-     position: relative;
-     }
+     position: relative;}
    
-   div.gallery:hover {
-     border: 1px solid #777;
-   }
+  div.gallery:hover {
+     border: 1px solid #777;}
+      
    
-   
-   
-   div.desc1 {
-     padding: 10px;
+  div.desc1 {
+     padding: 10px 0 10px;
      text-align: center;
      position: absolute;
      background-color: #4aaaa5;
      top:150px;
      left:0;
-     width: 130px;
-     color:white;
-
-   }
-   div.desc2 {
-    padding: 10px;
+     width:100%;
+     color:white; }
+   
+  div.desc2 {
+    padding: 10px 0 10px;
     text-align: center;
     position: absolute;
     background-color: #4aaaa5;
     top:100px;
     left:0;
     color:white;
-    width: 200px;
+    width: 100%;}
 
-  }
-
-   div.desc1:hover, div.desc2:hover {
-    color: yellow;
-  }
-  
-  code2:hover {font-size:25px;}
-  code3:hover {font-size:25px;}
-
+   div.desc1:hover, div.desc2:hover, a:hover {
+    color: purple;}
 
 
   /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
-  width: 920px; /* Full width */
+  width:100%; /* Full width */
   padding: 12px; /* Some padding */  
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
@@ -175,10 +153,43 @@ input[type=text], select, textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #4aaaa5;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
+
+@media only screen and (max-width:980px){
+  header { width:100%;}
+  .container {width: 95%;}
+  .container2 {width: 100%;}
+  .container3 {width: 90%;}
+  footer { width: 100%;}
+  h1 {width: 100%;}}
+
+
+@media only screen and (max-width:768px){
+    header { width:100%;}
+    .container {width: 95%;}
+    .container2 {width: 95%;}
+    .container3 {width: 95%;}
+    footer { width: 100%;}
+    #sibel {width:50%;}}
+
+  
+@media only screen and (max-width:640px){
+    
+    header { width:100%;}
+    #sibel {width: 90%; }
+    .container {width: 90%;}
+    .container2 {width: 100%;}
+    .container3 {width: 80%;}
+    footer { width: 100%;}
+    div.desc1 { width: 100%;}
+    div.desc2 { width: 100%;}
+    h1 {margin: 0px 50px;
+        width: fit-content;}  
+    #listname {margin:0px 20px;}}
